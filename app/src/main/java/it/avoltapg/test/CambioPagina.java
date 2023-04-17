@@ -27,11 +27,17 @@ public class CambioPagina extends AppCompatActivity {
         indietro = findViewById(R.id.idIndietro);
         cover = findViewById(R.id.idCover);
 
-        int numeroCanzone = 10;
+        Intent intent = getIntent();
+        int numeroCanzone = intent.getIntExtra("numeroCanzone");
+        Log.d(TAG, "aaaaaaaaaaaaaaaaaaaaaaa"+numeroCanzone);
 
         if(numeroCanzone==10)
         {
             cover.setImageResource(R.drawable.sfera);
+        }
+        else if(numeroCanzone==11)
+        {
+            cover.setImageResource(R.drawable.shiva);
         }
 
         indietro.setOnClickListener(new View.OnClickListener() {

@@ -56,7 +56,8 @@ public class MainActivity extends AppCompatActivity {
     public void cambiaPagina()
     {
         Intent intent = new Intent(this, CambioPagina.class);
-        intent.putExtra("nomeCanzone", c);
+        Log.d(TAG, "bbbbbbbbbbb"+c);
+        intent.putExtra("numeroCanzone", c);
         startActivity(intent);
     }
 }
