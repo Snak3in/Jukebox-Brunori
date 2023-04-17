@@ -4,26 +4,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    Button mostra;
-    Button conta;
-    Button cambia;
-    TextView numero;
+
     int c = 0;
+    final String TAG = "MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mostra = findViewById(R.id.IdMostra);
-        conta = findViewById(R.id.IdConta);
-        cambia = findViewById(R.id.IdCambia);
-        TextView numero = (TextView)findViewById(R.id.IdNumero);
+
+        Button mostra = findViewById(R.id.IdMostra);
+        Button conta = findViewById(R.id.IdConta);
+        Button cambia = findViewById(R.id.IdCambia);
+        TextView numero = findViewById(R.id.idNumero);
 
         mostra.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,8 +36,11 @@ public class MainActivity extends AppCompatActivity {
         conta.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Log.d(TAG, "Valore di conta "+ c);
                 c++;
+                Log.d(TAG, "Valore di conta "+ c);
                 numero.setText(c);
+                Log.d(TAG, " "+ c);
             }
         });
 
@@ -52,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
     public void cambiaPagina()
     {
         Intent intent = new Intent(this, CambioPagina.class);
+        intent.putExtra("nomeCanzone", c);
         startActivity(intent);
     }
 }
