@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class CambioPagina extends AppCompatActivity {
+    final String TAG = "CambioPagina";
     Button indietro;
     TextView titolo;
     ImageView cover;
@@ -18,6 +20,7 @@ public class CambioPagina extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d(TAG, "aa");
         setContentView(R.layout.activity_cambio_pagina);
 
         titolo = (TextView)findViewById(R.id.idTitolo);

@@ -39,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
                 Log.d(TAG, "Valore di conta "+ c);
                 c++;
                 Log.d(TAG, "Valore di conta "+ c);
-                numero.setText(c);
+                String s = String.valueOf(c);
+                numero.setText(s);
                 Log.d(TAG, " "+ c);
             }
         });
