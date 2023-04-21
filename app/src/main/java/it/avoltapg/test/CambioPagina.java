@@ -27,8 +27,8 @@ public class CambioPagina extends AppCompatActivity {
         indietro = findViewById(R.id.idIndietro);
         cover = findViewById(R.id.idCover);
 
-        Intent intent = getIntent();
-        int numeroCanzone = intent.getIntExtra("numeroCanzone");
+        Bundle b = intent.getExtras();
+        int numeroCanzone = b.getInt("numeroCanzone");
         Log.d(TAG, "aaaaaaaaaaaaaaaaaaaaaaa"+numeroCanzone);
 
         if(numeroCanzone==10)
