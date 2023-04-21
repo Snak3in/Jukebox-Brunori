@@ -11,9 +11,9 @@
         android:layout_width="223dp"
         android:layout_height="48dp"
         android:layout_marginStart="94dp"
-        android:layout_marginTop="309dp"
+        android:layout_marginTop="446dp"
         android:layout_marginEnd="94dp"
-        android:layout_marginBottom="374dp"
+        android:layout_marginBottom="237dp"
         android:text="Titolo canzone"
         android:textAlignment="center"
         android:textSize="20sp"
@@ -25,17 +25,11 @@
 
     <Button
         android:id="@+id/idIndietro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="158dp"
-        android:layout_marginTop="600dp"
-        android:layout_marginEnd="159dp"
-        android:layout_marginBottom="83dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_width="336dp"
+        android:layout_height="55dp"
+        android:text="Indietro"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="660dp" />
 
     <ImageView
         android:id="@+id/idCover"
@@ -43,14 +37,13 @@
         android:layout_height="355dp"
         android:layout_marginStart="91dp"
         android:layout_marginEnd="91dp"
-        android:layout_marginBottom="376dp"
         android:cropToPadding="true"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/idTitolo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_bias="0.175"
         app:srcCompat="@drawable/shiva" />
 
     <EditText
@@ -68,4 +61,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="106dp"
+        android:layout_height="95dp"
+        app:srcCompat="@drawable/star"
+        tools:layout_editor_absoluteX="134dp"
+        tools:layout_editor_absoluteY="565dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

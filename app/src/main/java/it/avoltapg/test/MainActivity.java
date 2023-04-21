@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    int c = 0;
+    int c = 1;
     final String TAG = "MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Log.d(TAG, "Valore di conta "+ c);
                 c++;
+                if(c>5)
+                {
+                    c=1;
+                }
                 Log.d(TAG, "Valore di conta "+ c);
                 String s = String.valueOf(c);
                 numero.setText(s);
